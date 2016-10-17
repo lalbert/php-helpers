@@ -1,0 +1,27 @@
+{
+	"name" : "lalbert/helpers",
+	"description" : "Useful collection of php helpers",
+	"type" : "library",
+	"homepage" : "https://github.com/lalbert/php-helpers",
+	"license" : "MIT",
+	"minimum-stability" : "stable",
+	"keywords" : [
+		"helpers",
+		"tools",
+		"utils"
+	],
+	"require-dev" : {
+		"phpunit/phpunit" : "~4.8 || ~5.3",
+		"codacy/coverage" : "dev-master"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Lalbert\\Helpers\\" : "src/"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"Lalbert\\Helpers\\Tests\\" : "tests/Helpers/Tests/"
+		}
+	}
+}
