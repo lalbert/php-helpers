@@ -34,23 +34,23 @@ class ArraysTest extends \PHPUnit_Framework_TestCase
 
     public function getArray()
     {
-        return [
+        return array(
             // Indexed
-            [[], 'indexed'],
-            [['a', 'b', 'c'], 'indexed'],
-            [[5, 10, 15], 'indexed'],
-            [[['a', 'b', 'c'], [5, 10, 15]], 'indexed'],
-            [['0' => 'a', '1' => 'b', '2', 'c'], 'indexed'],
+            array(array(), 'indexed'),
+            array(array('a', 'b', 'c'), 'indexed'),
+            array(array(5, 10, 15), 'indexed'),
+            array(array(array('a', 'b', 'c'), array(5, 10, 15)), 'indexed'),
+            array(array('0' => 'a', '1' => 'b', '2', 'c'), 'indexed'),
 
             // Bad indexed (associative)
-            [[1 => 0, 2 => 1, 3 => 2], 'associative'],
+            array(array(1 => 0, 2 => 1, 3 => 2), 'associative'),
 
             // Associative
-            [['foo' => 'bar', 'other' => 'value'], 'associative'],
+            array(array('foo' => 'bar', 'other' => 'value'), 'associative'),
 
             // Other
-            ['string', 'string'],
-            [new \stdClass(), 'object'],
-        ];
+            array('string', 'string'),
+            array(new \stdClass(), 'object'),
+        );
     }
 }
