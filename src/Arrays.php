@@ -19,6 +19,10 @@ class Arrays
             return false;
         }
 
+        if (empty($array)) {
+            return true;
+        }
+
         // keys are strings : associative array
         if ((bool) count(array_filter(array_keys($array), 'is_string'))) {
             return false;
